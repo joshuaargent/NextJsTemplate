@@ -63,7 +63,7 @@ root/
 └── src/
     ├── app/          # routing and pages
     ├── components/   # reusable UI components
-    ├── hooks/        # client-side logic
+    ├── hooks/        # client side logic
     └── lib/          # utilities and shared logic
 ```
 

@@ -1,6 +1,7 @@
 {
-	"name": "nextjs-template",
+	"name": "nextjstemplate",
 	"version": "1.0.0",
+	"description": "NextJS Template",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

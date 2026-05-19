@@ -1,116 +1,281 @@
-# NextJsTemplate
+# Next.js Template
 
-## Overview
+![Next.js](https://img.shields.io/badge/Next.js-15.1-black)
+![React](https://img.shields.io/badge/React-19.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-4.2-38bdf8)
 
-This is a reusable frontend template built with Next.js, designed to provide a clean and structured starting point for building applications.
-
-It includes a pre defined architecture, layout system, and core UI patterns to reduce setup time and enforce consistency across projects.
-
----
-
-## Purpose
-
-* provide a consistent starting point for frontend projects
-* reduce repeated setup work
-* enforce a clear and scalable structure
-
----
-
-## Core Structure
-
-### Layout System
-
-* Topbar and navigation structure
-* Responsive layout patterns
-* Reusable content containers
-
----
-
-### UI System
-
-* Component-based architecture
-* Shared design tokens (spacing, colours, typography)
-* Consistent styling approach across components
-
----
-
-### Navigation
-
-* Structured routing using Next.js App Router
-* Persistent layout components
-* Mobile and desktop navigation support
-
----
-
-## Technical Architecture
-
-### Frontend
-
-* **Next.js (TypeScript)**
-
-Handles:
-
-* routing and page structure
-* UI rendering and composition
-* layout and navigation systems
-
----
-
-### Structure
-
-```text
-root/
-└── src/
-    ├── app/          # routing and pages
-    ├── components/   # reusable UI components
-    ├── hooks/        # client side logic
-    └── lib/          # utilities and shared logic
-```
-
----
+> A reusable Next.js template for any website project. Built with Next.js, React, TypeScript, and Tailwind CSS.
 
 ## Features
 
-* pre configured layout system
-* reusable navigation components
-* consistent design system
-* responsive structure
-* minimal setup required to start building
+- **Responsive** - Mobile-first design
+- **Dark Mode** - Light/dark theme toggle
+- **SEO Optimized** - Metadata, sitemap, robots.txt
+- **Type-Safe** - Full TypeScript support
+- **Prose Styling** - Beautiful blog/article styling
+- **Animations** - Smooth fade, slide, scale animations
+- **Fast** - Static generation ready
+
+## Tech Stack
+
+| Category | Technology |
+|----------|-------------|
+| Framework | Next.js 15.1 (App Router) |
+| Language | TypeScript 5 |
+| UI Library | React 19.0 |
+| Styling | Tailwind CSS 4.2 |
+| Icons | Lucide React |
+| Class Utilities | clsx + tailwind-merge |
+| Toast Notifications | react-hot-toast |
+| Date Utilities | date-fns |
+
+## Project Structure
+
+```
+nextjs-template/
+├── src/
+│   ├── app/             # Next.js App Router pages
+│   │   ├── globals.css  # Global styles & design tokens
+│   │   ├── layout.tsx  # Root layout
+│   │   ├── page.tsx     # Homepage
+│   │   ├── error.tsx   # Error boundary
+│   │   ├── loading.tsx  # Loading state
+│   │   ├── not-found.tsx # 404 page
+│   │   ├── robots.ts   # robots.txt
+│   │   └── sitemap.ts # sitemap.xml
+│   ├── components/       # React components
+│   │   ├── layout/     # Layout components
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Container.tsx
+│   │   │   └── PageHeader.tsx
+│   │   ├── providers/  # Context providers
+│   │   │   └── ThemeProvider.tsx
+│   │   └── ui/         # UI components
+│   │       ├── Button.tsx
+│   │       ├── Badge.tsx
+│   │       ├── Card.tsx
+│   │       ├── Input.tsx
+│   │       ├── Textarea.tsx
+│   │       ├── Avatar.tsx
+│   │       ├── Divider.tsx
+│   │       ├── Icon.tsx
+│   │       ├── Skeleton.tsx
+│   │       ├── Tag.tsx
+│   │       └── Toaster.tsx
+│   ├── data/            # Static data
+│   │   └── site.ts      # Site configuration
+│   ├── lib/            # Utility functions
+│   │   ├── constants.ts  # Site constants
+│   │   ├── fonts.ts   # Font configuration
+│   │   └── utils.ts  # General utilities
+│   └── types/           # TypeScript types
+│       └── index.ts    # Type definitions
+├── .env.example        # Environment variables template
+├── next.config.ts       # Next.js configuration
+├── postcss.config.mjs  # PostCSS configuration
+├── tsconfig.json     # TypeScript configuration
+├── package.json    # Dependencies and scripts
+└── vitest.config.ts # Vitest configuration
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20.0.0+
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/nextjs-template.git
+cd nextjs-template
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+
+# Run type checking
+npm run type-check
+
+# Run linting
+npm run lint
+```
+
+### Build
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+```
+
+## Customization
+
+### Site Configuration
+
+Edit `src/lib/constants.ts` to configure your site:
+
+```typescript
+export const siteConfig = {
+  name: 'Your Site Name',
+  description: 'Your site description',
+  url: 'https://your-domain.com',
+  author: {
+    name: 'Your Name',
+    bio: 'About you',
+  },
+};
+
+export const mainNav = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+```
+
+### Adding Pages
+
+Create new pages in `src/app/`:
+
+```typescript
+// src/app/about/page.tsx
+import { Container } from '@/components/layout/Container';
+
+export default function AboutPage() {
+  return (
+    <Container>
+      <h1>About Me</h1>
+      <p>Your content here...</p>
+    </Container>
+  );
+}
+```
+
+### Adding Components
+
+Use existing UI components or create new ones:
+
+```typescript
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
+
+export function MyComponent() {
+  return (
+    <Card>
+      <h2>Title</h2>
+      <p>Content</p>
+      <Button>Click Me</Button>
+    </Card>
+  );
+}
+```
+
+## Design System
+
+### Colors
+
+| Role | Color |
+|------|-------|
+| Primary | `#0D9488` (teal) |
+| Background | `#FAFAF9` |
+| Card | `#FFFFFF` |
+| Text | `#1C1917` |
+| Muted | `#A8A29E` |
+
+### Typography
+
+| Element | Font |
+|---------|------|
+| Headings | Inter |
+| Body | Inter |
+| Blog/Prose | Lora |
+| Code | JetBrains Mono |
+
+### CSS Variables
+
+The template uses CSS custom properties via Tailwind CSS v4:
+
+```css
+@theme {
+  --color-accent: #0d9488;
+  --color-background: #fafaf9;
+  --color-foreground: #1c1917;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+```
+
+### Prose Styling
+
+Use the `.prose` class for beautiful article content:
+
+```typescript
+<article className="prose">
+  <h2>Heading</h2>
+  <p>Paragraph with serif font...</p>
+  <blockquote>Quote</blockquote>
+  <code>Inline code</code>
+  <pre>Code block</pre>
+</article>
+```
+
+## Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run lint:fix` | Fix ESLint errors |
+| `npm run type-check` | Run TypeScript type checking |
+| `npm run format` | Format code with Prettier |
+| `npm run format:check` | Check code formatting |
+| `npm run test` | Run Vitest in watch mode |
+| `npm run test:run` | Run Vitest once |
+
+## Pages
+
+| Route | Description |
+|-------|------------|
+| `/` | Homepage |
+| `/about` | About page |
+| `/contact` | Contact page |
+
+## Project Stats
+
+- **29** TypeScript/TSX files
+- **11** UI components
+- **4** Layout components
+- **3** Utility libraries
+- **4** Configuration files
+
+## License
+
+MIT License - feel free to use this template for any project.
+
+## Acknowledgments
+
+Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [Vercel](https://vercel.com).
 
 ---
 
-## Usage
-
-This template is intended to be used as a starting point:
-
-* clone the repository
-* install dependencies
-* begin building features on top of the existing structure
-
----
-
-## Related Projects
-
-* EloFlos
-* EloFlosMerch
-* Portfolio
-* NestJsTemplate
-
----
-
-## Status
-
-* Stable base structure
-* Actively used as a foundation for new projects
-
----
-
-## Notes
-
-This template is intentionally kept focused on:
-
-* simplicity
-* structure
-* reusability
-
-It reflects the frontend patterns used across my projects.
+<p align="center">
+  Built with ❤️ using Next.js Template
+</p>

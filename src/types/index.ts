@@ -2,6 +2,27 @@
 // Core Types for any website
 // ============================================
 
+// ----- Site Configuration -----
+export interface SiteConfig {
+  name: string;
+  description: string;
+  url: string;
+  ogImage: string;
+  links: {
+    youtube: string;
+    github: string;
+    instagram: string;
+    facebook: string;
+    strava: string;
+    email: string;
+  };
+  author: {
+    name: string;
+    bio: string;
+    avatar?: string;
+  };
+}
+
 // ----- Navigation -----
 export interface NavItem {
   label: string;

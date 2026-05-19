@@ -1,4 +1,6 @@
 import { cn } from '@/lib/utils';
+import { Container } from '@/components/layout/Container';
+import { SectionHeading } from '@/components/shared/SectionHeading';
 
 // ============================================
 // Types

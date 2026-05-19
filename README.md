@@ -1,11 +1,11 @@
 # Next.js Template
 
-![Next.js](https://img.shields.io/badge/Next.js-15.1-black)
-![React](https://img.shields.io/badge/React-19.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Next.js](https://img.shields.io/badge/Next.js-16.2-black)
+![React](https://img.shields.io/badge/React-19.2-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)
 ![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-4.2-38bdf8)
 
-> A reusable Next.js template for any website project. Built with Next.js, React, TypeScript, and Tailwind CSS.
+> A reusable Next.js template for any website project. Built with Next.js, React, and Tailwind CSS.
 
 ## Features
 
@@ -21,14 +21,18 @@
 
 | Category | Technology |
 |----------|-------------|
-| Framework | Next.js 15.1 (App Router) |
-| Language | TypeScript 5 |
-| UI Library | React 19.0 |
+| Framework | Next.js 16.2 (App Router) |
+| Language | TypeScript 6.0 |
+| UI Library | React 19.2 |
 | Styling | Tailwind CSS 4.2 |
+| Animations | Framer Motion |
 | Icons | Lucide React |
-| Class Utilities | clsx + tailwind-merge |
-| Toast Notifications | react-hot-toast |
+| Markdown | Marked + MDX Remote |
+| Syntax Highlighting | Shiki + Rehype Pretty Code |
+| State Management | Zustand |
+| Analytics | Vercel Analytics + Speed Insights |
 | Date Utilities | date-fns |
+| Class Utilities | clsx + tailwind-merge |
 
 ## Project Structure
 
@@ -265,6 +269,21 @@ Use the `.prose` class for beautiful article content:
 - **4** Layout components
 - **3** Utility libraries
 - **4** Configuration files
+
+## Favicons
+
+Generate favicons at [https://realfavicongenerator.net/](https://realfavicongenerator.net/) and add them to `public/`:
+
+```bash
+/public/
+├── favicon.ico
+├── apple-icon.png
+├── android-chrome-192x192.png
+├── android-chrome-512x512.png
+└── og-image.png
+```
+
+Update `src/app/layout.tsx` to include the favicon references.
 
 ## License
 

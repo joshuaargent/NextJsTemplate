@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils';
-import { SectionHeading } from '@/components/shared/SectionHeading';
 
 // ============================================
 // Types

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Avatar } from '@/components/ui/Avatar';
 import { siteConfig } from '@/lib/constants';
 
@@ -14,11 +14,11 @@ export function Hero() {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-foreground text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              Welcome to <span className="text-accent">{siteConfig.name}</span>
+            <h1 className="text-text-primary text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+              Hi, I&apos;m <span className="text-accent">{siteConfig.author.name}</span>
             </h1>
-            <p className="text-muted-foreground mx-auto mt-6 max-w-xl text-lg md:text-xl lg:mx-0">
-              {siteConfig.description}
+            <p className="text-text-secondary mx-auto mt-6 max-w-xl text-lg md:text-xl lg:mx-0">
+              {siteConfig.author.bio}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
               <Link
@@ -26,12 +26,12 @@ export function Hero() {
                 style={{ backgroundColor: '#0D9488', color: '#ffffff' }}
                 className="focus-visible:ring-accent inline-flex h-14 items-center justify-center gap-2 rounded-lg px-7 text-lg font-medium shadow-sm transition-all duration-200 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                Learn more
+                Read my story
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link
                 href="/contact"
-                className="focus-visible:ring-accent border-border text-foreground hover:bg-secondary inline-flex h-14 items-center justify-center gap-2 rounded-lg border bg-transparent px-7 text-lg font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                className="focus-visible:ring-accent border-border text-text-primary hover:bg-bg-secondary inline-flex h-14 items-center justify-center gap-2 rounded-lg border bg-transparent px-7 text-lg font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 Get in touch
               </Link>
@@ -42,9 +42,12 @@ export function Hero() {
           <div className="flex-shrink-0">
             <div className="relative">
               <div className="bg-accent/20 absolute inset-0 rounded-full blur-3xl" />
-              <Avatar alt={siteConfig.author.name} className="h-40 w-40 border-4 border-background shadow-xl md:h-48 md:w-48">
-                {/* Default avatar - can be replaced with actual image */}
-                <span className="text-4xl md:text-5xl">{siteConfig.author.name.charAt(0)}</span>
+              <Avatar
+                alt={siteConfig.author.name}
+                size="xl"
+                className="border-bg-card relative border-4 shadow-xl"
+              >
+                <span className="text-2xl">{siteConfig.author.name.charAt(0)}</span>
               </Avatar>
             </div>
           </div>

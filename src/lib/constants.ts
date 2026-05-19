@@ -8,17 +8,16 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
   ogImage: '/og-image.png',
   links: {
-    youtube: 'https://youtube.com/@channel',
-    github: 'https://github.com/username',
-    twitter: 'https://twitter.com/username',
-    instagram: 'https://instagram.com/username',
-    facebook: 'https://facebook.com/username',
-    strava: 'https://www.strava.com/athletes/username',
-    email: 'mailto:email@example.com',
+    youtube: 'https://youtube.com/@joshua_argent',
+    github: 'https://github.com/joshuaargent',
+    instagram: 'https://instagram.com/joshua_argent',
+    facebook: 'https://facebook.com/joshua_argent',
+    strava: 'https://www.strava.com/athletes/500534339',
+    email: 'mailto:argentjackjoshua@outlook.com',
   },
   author: {
     name: 'Your Name',
-    bio: 'About me',
+    bio: 'Your bio here',
   },
 };
 
@@ -59,7 +58,6 @@ export const footerNav = {
   social: [
     { label: 'YouTube', href: siteConfig.links.youtube },
     { label: 'GitHub', href: siteConfig.links.github },
-    { label: 'Twitter', href: siteConfig.links.twitter },
     { label: 'Instagram', href: siteConfig.links.instagram },
   ],
 };

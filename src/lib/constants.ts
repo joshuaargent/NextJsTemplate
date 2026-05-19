@@ -3,8 +3,8 @@
 // ============================================
 
 export const siteConfig = {
-  name: 'My Site',
-  description: 'My awesome website',
+  name: 'My Template',
+  description: 'A reusable Next.js template for any website project.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
   ogImage: '/og-image.png',
   links: {
@@ -27,10 +27,10 @@ export const siteConfig = {
 // ============================================
 
 export const meta = {
-  title: 'My Site',
-  description: 'My awesome website',
-  keywords: ['site', 'portfolio', 'personal'] as string[],
-  siteName: 'My Site',
+  title: 'My Template',
+  description: 'A reusable Next.js template for any website project.',
+  keywords: ['template', 'nextjs', 'website', 'portfolio'] as string[],
+  siteName: 'My Template',
   twitter: '@yourhandle',
   instagramHandle: '@yourhandle',
 };
@@ -50,6 +50,17 @@ export const footerNav = {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
+  ],
+  content: [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  social: [
+    { label: 'YouTube', href: siteConfig.links.youtube },
+    { label: 'GitHub', href: siteConfig.links.github },
+    { label: 'Twitter', href: siteConfig.links.twitter },
+    { label: 'Instagram', href: siteConfig.links.instagram },
   ],
 };
 

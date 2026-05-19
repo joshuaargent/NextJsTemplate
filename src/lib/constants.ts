@@ -59,6 +59,8 @@ export const footerNav = {
     { label: 'YouTube', href: siteConfig.links.youtube },
     { label: 'GitHub', href: siteConfig.links.github },
     { label: 'Instagram', href: siteConfig.links.instagram },
+    { label: 'Facebook', href: siteConfig.links.facebook },
+    { label: 'Strava', href: siteConfig.links.strava },
   ],
 };
 

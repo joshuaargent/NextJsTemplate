@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Mail, Play } from 'lucide-react';
 import { Avatar } from '@/components/ui/Avatar';
 import { siteConfig } from '@/lib/constants';
 
@@ -33,6 +33,7 @@ export function Hero() {
                 href="/contact"
                 className="focus-visible:ring-accent border-border text-text-primary hover:bg-bg-secondary inline-flex h-14 items-center justify-center gap-2 rounded-lg border bg-transparent px-7 text-lg font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
+                <Mail className="mr-2 h-4 w-4" />
                 Get in touch
               </Link>
             </div>

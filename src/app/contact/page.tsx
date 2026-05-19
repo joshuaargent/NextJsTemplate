@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
-import { siteConfig, meta } from '@/lib/constants';
+import { siteConfig } from '@/lib/constants';
 import { Mail, Youtube, Github, Instagram, Facebook, MapPin, Send } from 'lucide-react';
 
 const FORMSPREE_FORM_ID = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
@@ -140,7 +140,7 @@ export default function ContactPage() {
                       <Youtube className="h-5 w-5 text-red-500" />
                       <div>
                         <p className="text-text-primary text-sm font-medium">YouTube</p>
-                        <p className="text-text-muted text-xs">{meta.twitter}</p>
+                        <p className="text-text-muted text-xs">@joshua_argent</p>
                       </div>
                     </a>
                   )}
@@ -155,7 +155,7 @@ export default function ContactPage() {
                       <Github className="text-text-primary h-5 w-5" />
                       <div>
                         <p className="text-text-primary text-sm font-medium">GitHub</p>
-                        <p className="text-text-muted text-xs">@username</p>
+                        <p className="text-text-muted text-xs">@joshuaargent</p>
                       </div>
                     </a>
                   )}
@@ -170,7 +170,7 @@ export default function ContactPage() {
                       <Instagram className="h-5 w-5 text-pink-500" />
                       <div>
                         <p className="text-text-primary text-sm font-medium">Instagram</p>
-                        <p className="text-text-muted text-xs">{meta.instagramHandle}</p>
+                        <p className="text-text-muted text-xs">@joshua_argent</p>
                       </div>
                     </a>
                   )}
@@ -185,7 +185,7 @@ export default function ContactPage() {
                       <Facebook className="h-5 w-5 text-blue-600" />
                       <div>
                         <p className="text-text-primary text-sm font-medium">Facebook</p>
-                        <p className="text-text-muted text-xs">@username</p>
+                        <p className="text-text-muted text-xs">@joshua_argent</p>
                       </div>
                     </a>
                   )}
@@ -205,7 +205,7 @@ export default function ContactPage() {
                       </svg>
                       <div>
                         <p className="text-text-primary text-sm font-medium">Strava</p>
-                        <p className="text-text-muted text-xs">@username</p>
+                        <p className="text-text-muted text-xs">@500534339</p>
                       </div>
                     </a>
                   )}

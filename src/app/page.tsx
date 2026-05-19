@@ -1,43 +1,20 @@
-import { Hero } from '@/components/home/Hero';
-import { NowSection } from '@/components/home/NowSection';
-import { PillarCards } from '@/components/home/PillarCards';
-import { LatestContent } from '@/components/home/LatestContent';
-import { FeaturedProject } from '@/components/home/FeaturedProject';
-import { NewsletterCTA } from '@/components/shared/NewsletterCTA';
-import { getFeaturedProjects } from '@/data/projects';
+import { Container } from '@/components/layout/Container';
 
 // ============================================
 // Homepage
 // ============================================
 
-export default async function HomePage() {
-  const featuredProjects = await getFeaturedProjects();
-
+export default function HomePage() {
   return (
-    <>
-      <Hero />
-      <NowSection />
-      <PillarCards />
-
-      <section className="py-8 md:py-12">
-        <div className="container">
-          <LatestContent />
-        </div>
-      </section>
-
-      {featuredProjects.length > 0 && (
-        <section className="bg-bg-secondary py-8 md:py-12">
-          <div className="container">
-            <FeaturedProject project={featuredProjects[0]} />
-          </div>
-        </section>
-      )}
-
-      <section className="py-8 md:py-12">
-        <div className="container">
-          <NewsletterCTA />
-        </div>
-      </section>
-    </>
+    <Container>
+      <div className="py-20 text-center">
+        <h1 className="text-4xl font-bold sm:text-5xl">
+          Welcome to my site
+        </h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Start building your site here. Edit src/app/page.tsx to get started.
+        </p>
+      </div>
+    </Container>
   );
 }

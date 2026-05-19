@@ -3,22 +3,21 @@
 // ============================================
 
 export const siteConfig = {
-  name: 'My Site',
-  description: 'My awesome website',
+  name: 'My Template',
+  description: 'A reusable Next.js template for any website project.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
   ogImage: '/og-image.png',
   links: {
-    youtube: 'https://youtube.com/@channel',
-    github: 'https://github.com/username',
-    twitter: 'https://twitter.com/username',
-    instagram: 'https://instagram.com/username',
-    facebook: 'https://facebook.com/username',
-    strava: 'https://www.strava.com/athletes/username',
-    email: 'mailto:email@example.com',
+    youtube: 'https://youtube.com/@joshua_argent',
+    github: 'https://github.com/joshuaargent',
+    instagram: 'https://instagram.com/joshua_argent',
+    facebook: 'https://facebook.com/joshua_argent',
+    strava: 'https://www.strava.com/athletes/500534339',
+    email: 'mailto:argentjackjoshua@outlook.com',
   },
   author: {
     name: 'Your Name',
-    bio: 'About me',
+    bio: 'Your bio here',
   },
 };
 
@@ -27,10 +26,10 @@ export const siteConfig = {
 // ============================================
 
 export const meta = {
-  title: 'My Site',
-  description: 'My awesome website',
-  keywords: ['site', 'portfolio', 'personal'] as string[],
-  siteName: 'My Site',
+  title: 'My Template',
+  description: 'A reusable Next.js template for any website project.',
+  keywords: ['template', 'nextjs', 'website', 'portfolio'] as string[],
+  siteName: 'My Template',
   twitter: '@yourhandle',
   instagramHandle: '@yourhandle',
 };
@@ -50,6 +49,18 @@ export const footerNav = {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
+  ],
+  content: [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  social: [
+    { label: 'YouTube', href: siteConfig.links.youtube },
+    { label: 'GitHub', href: siteConfig.links.github },
+    { label: 'Instagram', href: siteConfig.links.instagram },
+    { label: 'Facebook', href: siteConfig.links.facebook },
+    { label: 'Strava', href: siteConfig.links.strava },
   ],
 };
 

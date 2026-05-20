@@ -8,6 +8,7 @@ export interface SiteConfig {
   description: string;
   url: string;
   ogImage: string;
+  location?: string;
   links: {
     youtube: string;
     github: string;

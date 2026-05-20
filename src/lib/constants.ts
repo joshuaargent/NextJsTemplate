@@ -7,6 +7,7 @@ export const siteConfig = {
   description: 'A reusable Next.js template for any website project.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
   ogImage: '/og-image.png',
+  location: 'Surrey, United Kingdom',
   links: {
     youtube: 'https://youtube.com/@joshua_argent',
     github: 'https://github.com/joshuaargent',

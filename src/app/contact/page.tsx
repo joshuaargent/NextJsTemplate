@@ -123,7 +123,7 @@ export default function ContactPage() {
                 <h3 className="text-text-primary mb-4 font-semibold">Location</h3>
                 <div className="text-text-secondary flex items-center gap-3">
                   <MapPin className="h-5 w-5" />
-                  {siteConfig.author.bio}
+                  {siteConfig.location}
                 </div>
               </Card>
 

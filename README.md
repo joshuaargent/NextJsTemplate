@@ -4,6 +4,7 @@
 ![React](https://img.shields.io/badge/React-19.2-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)
 ![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-4.2-38bdf8)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 > A reusable Next.js template for any website project. Built with Next.js, React, and Tailwind CSS.
 
@@ -296,5 +297,6 @@ Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com
 ---
 
 <p align="center">
-  Built with ❤️ using Next.js Template
+  Built with ❤️ by <a href="https://joshuaargent.vercel.app">Joshua Argent</a>
 </p>
+
